@@ -1,13 +1,10 @@
-// Hero Section — Pixel-perfect 3-column layout: Text | Image | Navigation
-// Uses standard Tailwind classes + arbitrary values (no @theme tokens)
+// Hero Section — 3-column layout with large oval image and overlapping nav card
 import { FiGithub, FiLinkedin, FiArrowRight } from "react-icons/fi";
-import profileImg from "../assets/dp.jpeg";
+import profileImg from "../assets/dp.png";
 
 const Hero = () => {
-  // Skill tags
   const heroTags = ["Java", "MERN", "DSA"];
 
-  // Right-side navigation links (smooth scroll)
   const navLinks = [
     { label: "About Me", href: "#about" },
     { label: "Skills", href: "#skills" },
@@ -20,13 +17,11 @@ const Hero = () => {
       className="min-h-screen bg-[#F7F5F2] flex items-center pt-24 pb-12"
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
-        {/* 3-column grid — text 5 | image+nav 7 */}
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-4">
 
           {/* ── LEFT: Text Content ── */}
           <div className="lg:col-span-5 order-2 lg:order-1">
-
-            {/* Greeting — italic serif, smaller */}
+            {/* Greeting */}
             <p
               className="text-xl md:text-2xl text-gray-500 mb-1"
               style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}
@@ -40,13 +35,10 @@ const Hero = () => {
               </span>
             </p>
 
-            {/* Main Title — very large serif, 3 lines */}
+            {/* Main Title */}
             <h1
               className="font-bold mt-2"
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                lineHeight: 1.05,
-              }}
+              style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.05 }}
             >
               <span className="block text-[64px] md:text-[80px] text-[#1A1A1A]">
                 Full-Stack
@@ -59,7 +51,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            {/* Skill Tags — pill style with border */}
+            {/* Skill Tags */}
             <div className="flex flex-wrap gap-3 mt-8">
               {heroTags.map((tag) => (
                 <span
@@ -78,7 +70,7 @@ const Hero = () => {
               modern experience.
             </p>
 
-            {/* Buttons — Contact + Social icons */}
+            {/* Buttons */}
             <div className="flex items-center gap-4 mt-8">
               <a
                 href="#contact"
@@ -86,8 +78,6 @@ const Hero = () => {
               >
                 Contact Me <FiArrowRight size={18} />
               </a>
-
-              {/* GitHub */}
               <a
                 href="https://github.com/Hemanshukumar-dev"
                 target="_blank"
@@ -97,8 +87,6 @@ const Hero = () => {
               >
                 <FiGithub size={22} />
               </a>
-
-              {/* LinkedIn */}
               <a
                 href="http://www.linkedin.com/in/hemanshukumar"
                 target="_blank"
@@ -111,23 +99,30 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* ── CENTER + RIGHT: Image & Nav combined ── */}
-          <div className="lg:col-span-7 order-1 lg:order-2 flex items-center justify-center gap-4">
+          {/* ── RIGHT: Image + Overlapping Nav Card ── */}
+          <div className="lg:col-span-7 order-1 lg:order-2 relative flex justify-center">
 
-            {/* Profile Image — fixed-size oval container */}
+            {/* Profile Image — large rounded-rect / stadium shape */}
             <div
-              className="w-[300px] h-[380px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[520px] overflow-hidden flex-shrink-0"
-              style={{ borderRadius: "45% 45% 45% 45% / 40% 40% 55% 55%" }}
+              className="w-[340px] h-[440px] md:w-[420px] md:h-[540px] lg:w-[480px] lg:h-[620px] overflow-hidden flex-shrink-0"
+              style={{ borderRadius: "50% 50% 35% 35% / 40% 40% 25% 25%" }}
             >
               <img
                 src={profileImg}
                 alt="Hemanshu Kumar"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
 
-            {/* Navigation Card — positioned close to image */}
-            <div className="hidden lg:block bg-white rounded-2xl shadow-lg p-6 w-[180px] flex-shrink-0 -ml-4">
+            {/* Navigation Card — overlapping the image from the right */}
+            <div
+              className="hidden lg:block absolute bg-white rounded-2xl shadow-lg p-6 w-[180px]"
+              style={{
+                right: "2%",
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
               <p className="text-xs tracking-[0.2em] uppercase text-gray-400 font-medium mb-5">
                 Navigation
               </p>
@@ -145,8 +140,8 @@ const Hero = () => {
               </ul>
             </div>
 
-            {/* Mobile nav — shown only on small screens */}
-            <div className="lg:hidden bg-white rounded-2xl shadow-lg p-5 w-full max-w-[200px]">
+            {/* Mobile nav */}
+            <div className="lg:hidden mt-4 bg-white rounded-2xl shadow-lg p-5 w-full max-w-[200px]">
               <p className="text-xs tracking-[0.2em] uppercase text-gray-400 font-medium mb-4">
                 Navigation
               </p>
