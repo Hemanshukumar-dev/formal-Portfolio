@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* ── Design System (Tailwind v4 @theme) ── */
+@theme {
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-beige: #F7F5F2;
+  --color-accent: #E8E4DF;
+  --color-primary: #1A1A1A;
+  --color-secondary: #6B7280;
+  --color-card: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-tag-bg: #F3F4F6;
+  --color-tag-highlight: #F5F0EB;
+}
+
+/* ── Global Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-beige);
+  color: var(--color-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
