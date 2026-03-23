@@ -27,11 +27,13 @@ const Certificates = () => {
               onClick={() => setSelectedCert(cert)}
               className="bg-white rounded-2xl shadow-md border border-border p-6 text-left hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              {/* Certificate preview — title card style */}
-              <div className="bg-beige rounded-xl border border-border p-6 mb-4 flex items-center justify-center min-h-[140px]">
-                <p className="text-secondary text-sm text-center font-medium group-hover:text-primary transition-colors">
-                  📜 Click to view
-                </p>
+              {/* Certificate preview image */}
+              <div className="overflow-hidden rounded-xl mb-4">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-40 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
               {/* Certificate Info */}
@@ -69,18 +71,22 @@ const Certificates = () => {
             </h3>
             <p className="text-secondary text-sm mb-5">{selectedCert.issuer}</p>
 
-            {/* Certificate Content / Link */}
-            <div className="bg-beige rounded-xl border border-border p-8 text-center min-h-[300px] flex flex-col items-center justify-center">
-              <p className="text-secondary mb-4">
-                Certificate available at the issuer's platform.
-              </p>
+            {/* Full Certificate Image */}
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className="w-full max-h-[80vh] object-contain rounded-lg mb-5"
+            />
+
+            {/* Authenticate Button */}
+            <div className="text-center">
               <a
                 href={selectedCert.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary text-white rounded-full px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2"
               >
-                View Certificate ↗
+                Authenticate ↗
               </a>
             </div>
           </div>

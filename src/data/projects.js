@@ -5,6 +5,7 @@ const projects = [
   {
     id: 1,
     title: "PRAYAS",
+    image: "/images/prayas.jpg",
     spotlight: true,
     description:
       "AI-powered flood prediction & disaster response platform using real-time data and predictive analysis.",
@@ -15,6 +16,7 @@ const projects = [
   {
     id: 2,
     title: "Tax Filing Guide",
+    image: "/images/tax.png",
     spotlight: false,
     description:
       "AI-assisted tax guidance system to help users understand and calculate taxes easily.",
@@ -25,6 +27,7 @@ const projects = [
   {
     id: 3,
     title: "CloudVault",
+    image: "/images/cloudvault.png",
     spotlight: false,
     description:
       "Secure cloud-based file storage system with authentication and file management.",
@@ -35,6 +38,7 @@ const projects = [
   {
     id: 4,
     title: "DocKit",
+    image: "/images/docit.png",
     spotlight: false,
     description:
       "Document management system for organizing and accessing files efficiently.",
@@ -45,6 +49,7 @@ const projects = [
   {
     id: 5,
     title: "Schemz",
+    image: "/images/schemz.png",
     spotlight: false,
     description:
       "Platform for exploring and understanding government schemes in a simplified way.",

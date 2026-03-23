@@ -21,6 +21,15 @@ const Projects = () => {
               key={project.id}
               className="bg-white rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
             >
+              {/* Card Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
               {/* Card Body */}
               <div className="p-6 flex flex-col flex-1">
                 {/* Title + Badges */}
