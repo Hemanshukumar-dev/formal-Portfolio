@@ -65,12 +65,11 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      // Replace with your EmailJS service/template/public key
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_37nk6u8",
+        "template_jm03mdq",
         formRef.current,
-        "YOUR_PUBLIC_KEY"
+        "210BGxrgxkH_3Lvrf"
       );
       setSuccess(true);
       formRef.current.reset();
