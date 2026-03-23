@@ -83,30 +83,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-beige">
+    <section id="contact" className="py-20 bg-[#F7F5F2]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* ── Left Column: Info ── */}
           <div>
             {/* Status badge */}
-            <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 border border-border mb-6">
+            <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 border border-gray-200 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
-              <span className="text-sm text-secondary font-medium">
+              <span className="text-sm text-gray-600 font-medium">
                 Ready for Software Roles
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-2 leading-tight">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-2 leading-tight">
               Let's build your next
             </h2>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-                full-stack solution.
-              </span>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
+              full-stack solution.
             </h2>
 
-            <p className="text-secondary leading-relaxed mb-10 max-w-md">
+            <p className="text-gray-500 leading-relaxed mb-10 max-w-md">
               Whether you have a project idea, internship, or software role in
               mind, I'd be glad to connect.
             </p>
@@ -115,11 +113,11 @@ const Contact = () => {
             <div className="space-y-6">
               {contactInfo.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-tag-bg flex items-center justify-center text-secondary">
+                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500">
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-secondary font-medium">
+                    <p className="text-xs uppercase tracking-widest text-gray-400 font-medium">
                       {item.label}
                     </p>
                     {item.href ? (
@@ -127,12 +125,12 @@ const Contact = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary font-medium text-sm hover:text-secondary transition-colors"
+                        className="text-black font-medium text-sm hover:text-gray-600 transition-colors"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-primary font-medium text-sm">
+                      <p className="text-black font-medium text-sm">
                         {item.value}
                       </p>
                     )}
@@ -143,21 +141,21 @@ const Contact = () => {
           </div>
 
           {/* ── Right Column: Form ── */}
-          <div className="bg-white rounded-2xl shadow-md border border-border p-8">
-            <h3 className="font-heading text-2xl font-semibold text-primary mb-6">
+          <div className="bg-white rounded-2xl shadow-md p-8">
+            <h3 className="font-heading text-2xl font-semibold text-black mb-6">
               Send a Message
             </h3>
 
             {/* Success Message */}
             {success && (
-              <div className="bg-green-50 border border-green-200 text-green-700 rounded-xl p-4 mb-4 text-sm">
+              <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 mb-4 text-sm">
                 ✅ Message sent successfully! I'll get back to you soon.
               </div>
             )}
 
             {/* Form Error */}
             {errors.form && (
-              <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl p-4 mb-4 text-sm">
+              <div className="bg-red-50 border border-red-200 text-red-700 rounded-lg p-4 mb-4 text-sm">
                 {errors.form}
               </div>
             )}
@@ -165,16 +163,16 @@ const Contact = () => {
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}
               <div>
-                <label className="block text-sm font-medium text-primary mb-1.5">
+                <label className="block text-sm font-medium text-gray-600 mb-1.5">
                   Name
                 </label>
                 <input
                   type="text"
                   name="user_name"
-                  placeholder="John Doe"
-                  className={`w-full px-4 py-3 rounded-xl border ${
-                    errors.name ? "border-red-400" : "border-border"
-                  } bg-white text-primary placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                  placeholder="Enter your name"
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.name ? "border-red-400" : "border-gray-200"
+                  } bg-transparent text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black transition-colors`}
                 />
                 {errors.name && (
                   <p className="text-red-500 text-xs mt-1">{errors.name}</p>
@@ -183,16 +181,16 @@ const Contact = () => {
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-primary mb-1.5">
+                <label className="block text-sm font-medium text-gray-600 mb-1.5">
                   Email
                 </label>
                 <input
                   type="email"
                   name="user_email"
-                  placeholder="john@example.com"
-                  className={`w-full px-4 py-3 rounded-xl border ${
-                    errors.email ? "border-red-400" : "border-border"
-                  } bg-white text-primary placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                  placeholder="Enter your email address"
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.email ? "border-red-400" : "border-gray-200"
+                  } bg-transparent text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black transition-colors`}
                 />
                 {errors.email && (
                   <p className="text-red-500 text-xs mt-1">{errors.email}</p>
@@ -201,16 +199,16 @@ const Contact = () => {
 
               {/* Message */}
               <div>
-                <label className="block text-sm font-medium text-primary mb-1.5">
+                <label className="block text-sm font-medium text-gray-600 mb-1.5">
                   Message
                 </label>
                 <textarea
                   name="message"
                   rows="5"
-                  placeholder="Let's work together!"
-                  className={`w-full px-4 py-3 rounded-xl border ${
-                    errors.message ? "border-red-400" : "border-border"
-                  } bg-white text-primary placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none`}
+                  placeholder="Tell me about your project or opportunity..."
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.message ? "border-red-400" : "border-gray-200"
+                  } bg-transparent text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black transition-colors resize-none`}
                 />
                 {errors.message && (
                   <p className="text-red-500 text-xs mt-1">{errors.message}</p>
@@ -221,7 +219,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full px-6 py-3 text-sm font-medium flex items-center justify-center gap-2 hover:from-purple-700 hover:to-pink-600 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full bg-black text-white rounded-full px-6 py-3 text-sm font-medium flex items-center justify-center gap-2 hover:bg-black/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>
@@ -247,9 +245,7 @@ const Contact = () => {
                     Sending...
                   </>
                 ) : (
-                  <>
-                    Send Message <FiSend size={16} />
-                  </>
+                  "Send Message →"
                 )}
               </button>
             </form>
