@@ -20,9 +20,16 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <span className="font-heading text-lg font-semibold tracking-wide text-primary">
+        <a
+          href="#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="font-heading text-lg font-semibold tracking-wide text-primary cursor-pointer hover:opacity-80 transition-opacity"
+        >
           • PORTFOLIO
-        </span>
+        </a>
 
         {/* CV/Resume button */}
         <a
