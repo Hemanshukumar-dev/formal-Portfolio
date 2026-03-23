@@ -66,10 +66,10 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        "service_37nk6u8",
-        "template_jm03mdq",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "210BGxrgxkH_3Lvrf"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       setSuccess(true);
       formRef.current.reset();
