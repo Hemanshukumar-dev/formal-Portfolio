@@ -37,7 +37,7 @@ const About = () => {
           {/* ── Right: Cards ── */}
           <div className="lg:col-span-5 space-y-6">
             {/* Education Card */}
-            <div className="bg-white rounded-2xl shadow-md border border-border p-6">
+            <div className="bg-white rounded-2xl shadow-md border border-border p-6 cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-heading text-xl font-semibold text-primary flex items-center gap-2 mb-4">
                 🎓 Education
               </h3>
@@ -56,7 +56,7 @@ const About = () => {
             </div>
 
             {/* Key Highlights Card */}
-            <div className="bg-white rounded-2xl shadow-md border border-border p-6">
+            <div className="bg-white rounded-2xl shadow-md border border-border p-6 cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-heading text-xl font-semibold text-primary flex items-center gap-2 mb-4">
                 ⭐ Key Highlights
               </h3>

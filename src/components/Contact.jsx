@@ -219,7 +219,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-black text-white rounded-full px-6 py-3 text-sm font-medium flex items-center justify-center gap-2 hover:bg-black/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full bg-black text-white rounded-full px-6 py-3 text-sm font-medium flex items-center justify-center gap-2 hover:bg-black/90 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>

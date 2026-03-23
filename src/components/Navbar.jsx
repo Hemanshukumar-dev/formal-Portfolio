@@ -36,7 +36,7 @@ const Navbar = () => {
           href="/Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary text-white rounded-full px-5 py-2.5 text-sm font-semibold uppercase tracking-wide flex items-center gap-2 hover:bg-gray-800 transition-colors"
+          className="bg-primary text-white rounded-full px-5 py-2.5 text-sm font-semibold uppercase tracking-wide flex items-center gap-2 hover:bg-gray-800 hover:shadow-lg hover:scale-105 transition-all duration-300"
         >
           CV/RESUME →
         </a>

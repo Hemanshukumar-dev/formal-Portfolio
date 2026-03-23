@@ -20,7 +20,7 @@ const Skills = () => {
           {skills.map((category) => (
             <div
               key={category.id}
-              className="bg-white rounded-2xl shadow-md border border-border p-6"
+              className="bg-white rounded-2xl shadow-md border border-border p-6 cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               {/* Category Title */}
               <h3 className="font-heading text-lg font-semibold text-primary flex items-center gap-2 mb-4">

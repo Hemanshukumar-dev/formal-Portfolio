@@ -25,7 +25,7 @@ const Certificates = () => {
             <button
               key={cert.id}
               onClick={() => setSelectedCert(cert)}
-              className="bg-white rounded-2xl shadow-md border border-border p-6 text-left hover:shadow-lg transition-shadow cursor-pointer group"
+              className="bg-white rounded-2xl shadow-md border border-border p-6 text-left hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
             >
               {/* Certificate preview image */}
               <div className="overflow-hidden rounded-xl mb-4">
@@ -59,7 +59,7 @@ const Certificates = () => {
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-tag-bg flex items-center justify-center text-primary hover:bg-accent transition-colors"
+              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-tag-bg flex items-center justify-center text-primary hover:bg-accent hover:scale-110 transition-all duration-300"
               aria-label="Close modal"
             >
               <FiX size={18} />
@@ -84,7 +84,7 @@ const Certificates = () => {
                 href={selectedCert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary text-white rounded-full px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2"
+                className="bg-primary text-white rounded-full px-6 py-2.5 text-sm font-medium hover:bg-gray-800 hover:shadow-lg hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Authenticate ↗
               </a>

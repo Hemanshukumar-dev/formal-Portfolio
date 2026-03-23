@@ -19,7 +19,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-2xl shadow-md border border-border overflow-hidden flex flex-col"
+              className="bg-white rounded-2xl shadow-md border border-border overflow-hidden flex flex-col cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               {/* Card Image */}
               <div className="overflow-hidden">
@@ -74,7 +74,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-primary hover:text-secondary transition-colors"
+                    className="flex items-center gap-2 text-sm font-medium text-primary hover:text-secondary transition-all duration-300"
                   >
                     <FiGithub size={16} />
                     GitHub
@@ -84,7 +84,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-tag-bg rounded-full px-4 py-1.5 text-sm font-medium text-primary border border-border hover:bg-accent transition-colors"
+                      className="flex items-center gap-2 bg-tag-bg rounded-full px-4 py-1.5 text-sm font-medium text-primary border border-border hover:bg-accent hover:shadow-sm transition-all duration-300"
                     >
                       <FiExternalLink size={14} />
                       Live Demo

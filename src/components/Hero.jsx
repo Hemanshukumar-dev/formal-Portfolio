@@ -1,5 +1,5 @@
 // Hero Section — 3-column layout with large oval image and overlapping nav card
-import { FiGithub, FiLinkedin, FiArrowRight } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiArrowRight, FiChevronDown } from "react-icons/fi";
 import profileImg from "../assets/dp.png";
 
 const Hero = () => {
@@ -74,7 +74,7 @@ const Hero = () => {
             <div className="flex items-center gap-4 mt-8">
               <a
                 href="#contact"
-                className="bg-[#1A1A1A] text-white rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide flex items-center gap-2 hover:bg-gray-800 transition-colors"
+                className="bg-[#1A1A1A] text-white rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide flex items-center gap-2 hover:bg-gray-800 hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 Contact Me <FiArrowRight size={18} />
               </a>
@@ -82,7 +82,7 @@ const Hero = () => {
                 href="https://github.com/Hemanshukumar-dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-[#1A1A1A] hover:bg-gray-50 transition-colors"
+                className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-[#1A1A1A] hover:bg-gray-50 hover:shadow-md hover:scale-110 transition-all duration-300"
                 aria-label="GitHub"
               >
                 <FiGithub size={22} />
@@ -91,7 +91,7 @@ const Hero = () => {
                 href="http://www.linkedin.com/in/hemanshukumar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[#0A66C2] flex items-center justify-center text-white hover:bg-[#004182] transition-colors"
+                className="w-12 h-12 rounded-full bg-[#0A66C2] flex items-center justify-center text-white hover:bg-[#004182] hover:shadow-md hover:scale-110 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <FiLinkedin size={22} />
@@ -160,6 +160,20 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* ── Scroll Hint ── */}
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-1 mt-12 group cursor-pointer"
+        >
+          <span className="text-xs uppercase tracking-widest text-gray-400 font-medium group-hover:text-gray-600 transition-colors duration-300">
+            Scroll to explore
+          </span>
+          <FiChevronDown
+            size={20}
+            className="text-gray-400 animate-bounce group-hover:text-gray-600 transition-colors duration-300"
+          />
+        </a>
       </div>
     </section>
   );
